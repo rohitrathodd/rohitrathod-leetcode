@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class _1_Longest_Palindromic_Substring {
 
     public static boolean isPalindrom(String string){
@@ -14,11 +16,27 @@ public class _1_Longest_Palindromic_Substring {
         return true;
     }
 
-    public String longestPalindrome(String s) {
-        return null;
+    public static String longestPalindrome(String s) {
+
+        if(isPalindrom(s)){
+            return s;
+        }
+        StringBuffer stringBuffer1 = new StringBuffer(s);
+        StringBuffer stringBuffer2 = new StringBuffer(s);
+        String first = stringBuffer1.replace(s.length()-1,s.length(),"").toString();
+        String second =stringBuffer2.replace(0,1,"").toString();
+
+        if(longestPalindrome(first).length()>=longestPalindrome(second).length()){
+            return longestPalindrome(first);
+        }
+        else
+        {
+            return longestPalindrome(second);
+        }
     }
 
     public static void main(String[] args){
-        System.out.println(isPalindrom("acbaba"));
+
+        System.out.println(longestPalindrome("xaabacxcabaaxcabaax"));
     }
 }
