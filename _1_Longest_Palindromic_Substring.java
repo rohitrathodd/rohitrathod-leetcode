@@ -1,7 +1,6 @@
 import java.sql.SQLOutput;
 
 public class _1_Longest_Palindromic_Substring {
-
     public static boolean isPalindrom(String string){
 
         int start =0;
@@ -15,7 +14,6 @@ public class _1_Longest_Palindromic_Substring {
         }
         return true;
     }
-
     public static String longestPalindrome(String s) {
 
         if(isPalindrom(s)){
@@ -36,7 +34,6 @@ public class _1_Longest_Palindromic_Substring {
     }
 
     public static void main(String[] args){
-
         System.out.println(longestPalindrome("xaabacxcabaaxcabaax"));
     }
 }
