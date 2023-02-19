@@ -22,30 +22,34 @@ public class _42_Trapping_Rain_Water {
                 currentHeightIndex = i;
             }
 
+            if(i==height.length-1 && currentHeightIndex<height.length-1){
 
-        }
-
-        if(currentHeightIndex<height.length-1){
-
-            if(height[currentHeightIndex]>height[currentHeightIndex+1]){
                 height[currentHeightIndex]=height[currentHeightIndex]-1;
-
-                int[] arr = new int[height.length-currentHeightIndex];
-
-                for(int i=0,j=currentHeightIndex;i<arr.length;i++){
-                    arr[i]=height[j];
-                    j++;
-                }
-                return trapWater+trap(arr);
+                i=currentHeightIndex;
             }
-
         }
+
+//        if(currentHeightIndex<height.length-1){
+//
+//            if(height[currentHeightIndex]>height[currentHeightIndex+1]){
+//                height[currentHeightIndex]=height[currentHeightIndex]-1;
+//
+//                int[] arr = new int[height.length-currentHeightIndex];
+//
+//                for(int i=0,j=currentHeightIndex;i<arr.length;i++){
+//                    arr[i]=height[j];
+//                    j++;
+//                }
+//                return trapWater+trap(arr);
+//            }
+//
+//        }
         return trapWater;
     }
 
 
 
     public static void main(String[] args){
-        System.out.println(trap(new int[]{4,2,3}));
+        System.out.println(trap(new int[]{5,4,1,2}));
     }
 }
