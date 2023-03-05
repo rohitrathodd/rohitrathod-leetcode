@@ -37,7 +37,7 @@ public class _49_Group_Anagrams {
             return false;
         }
         for(int i=0;i<t.length();i++){
-            s = s.replaceFirst()
+//            s = s.replaceFirst();
             s= s.replace(t.charAt(i)+"","");
         }
         if(s.isEmpty()){
