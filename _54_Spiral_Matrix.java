@@ -67,7 +67,7 @@ public class _54_Spiral_Matrix {
             }else{
                 break;
             }
-            
+
             index++;
             row--;
             column--;
